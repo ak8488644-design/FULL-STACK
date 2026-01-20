@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Responsive Banking UI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <main class="bank-app">
-    <h2>My Bank</h2>
+  <div class="dashboard">
+    <header class="header">
+      <h2>Admin Dashboard</h2>
+      <button id="themeToggle">Toggle Theme</button>
+    </header>
 
-    <section class="balance-card">
-      <span>Current Balance</span>
-      <h1 id="balance">₹ 0</h1>
-    </section>
+    <aside class="sidebar">
+      <ul>
+        <li>Dashboard</li>
+        <li>Users</li>
+        <li>Settings</li>
+        <li>Logout</li>
+      </ul>
+    </aside>
 
-    <section class="controls">
-      <input type="number" id="amount" placeholder="Enter amount" />
-      <div class="buttons">
-        <button id="deposit">Deposit</button>
-        <button id="withdraw">Withdraw</button>
-      </div>
-      <p id="message"></p>
-    </section>
-  </main>
+    <main class="main">
+      <h3>Welcome Admin</h3>
+      <p>Manage users, settings, and system data.</p>
+    </main>
+
+    <footer class="footer">
+      © 2026 Admin Panel
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
