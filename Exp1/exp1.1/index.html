@@ -1,71 +1,21 @@
-h1 {
-    text-decoration: underline dotted black;
-    color: green;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 1.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.input-box {
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
+  <div class="container">
+    <h1>Registration Form</h1>
 
-#username,
-#age,
-#email {
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
+    <input type="text" id="username" class="input-box" placeholder="Enter Name"><br><br>
+    <input type="number" id="age" class="input-box" placeholder="Enter Age"><br><br>
+    <input type="email" id="email" class="input-box" placeholder="Enter Email"><br><br>
 
-button {
-    color: white;
-}
+    <button id="Sub">Submit</button><br><br>
+    <button id="res">Reset</button>
+  </div>
 
-#Sub {
-    background-color: blue;
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #777;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-#res {
-    background-color: red;
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #777;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-/* PAGE CENTER */
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* FORM CONTAINER */
-.container {
-    width: 350px;
-    border: 2px solid black;
-    padding: 20px;
-    border-radius: 15px;
-    box-sizing: border-box;
-}
+</body>
+</html>
