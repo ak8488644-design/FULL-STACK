@@ -1,7 +1,7 @@
 h1 {
-    text-decoration:black underline dotted;
+    text-decoration: underline dotted black;
     color: green;
-    text-align:center;
+    text-align: center;
 }
 
 .input-box {
@@ -9,34 +9,13 @@ h1 {
     height: 35px;
     padding: 6px 10px;
     font-size: 14px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    /* 🔥 corner curve */
-    box-sizing: border-box;
-}
-
-#username {
-
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    box-sizing: border-box;
-
-}
-
-#age {
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     border-radius: 10px;
     box-sizing: border-box;
 }
 
+#username,
+#age,
 #email {
     width: 300px;
     height: 35px;
@@ -53,9 +32,6 @@ button {
 
 #Sub {
     background-color: blue;
-
-
-
     width: 300px;
     height: 35px;
     padding: 6px 10px;
@@ -76,30 +52,20 @@ button {
     box-sizing: border-box;
 }
 
+/* PAGE CENTER */
 body {
-    body {
-        
-        margin: 0;
-        height: 100vh;
-        /* full screen height */
-        display: flex;
-        justify-content: center;
-        /* horizontal center */
-        align-items: center;
-        /* vertical center */
-    }
-   .container {
-    width: 350px;
-    margin: auto;              /* page ke center */
-    padding: 25px;             /* border ke andar space */
-    text-align: left;          /* text proper rahe */
-    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-}
-
+/* FORM CONTAINER */
 .container {
+    width: 350px;
     border: 2px solid black;
     padding: 20px;
     border-radius: 15px;
+    box-sizing: border-box;
 }
