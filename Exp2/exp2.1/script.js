@@ -1,14 +1,21 @@
-let textInput = document.getElementById("textInput");
-let counter = document.getElementById("counter");
-let maxChars = 150;
+body {
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
 
-textInput.addEventListener("input", function () {
-  let length = textInput.value.length;
-  counter.innerText = length + " / " + maxChars + " characters";
+.box {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
 
-  if (length >= maxChars) {
-    counter.classList.add("limit");
-  } else {
-    counter.classList.remove("limit");
-  }
-});
+textarea {
+  width: 300px;
+  height: 120px;
+  padding: 10px;
+}
