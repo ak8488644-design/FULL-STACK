@@ -1,40 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Experiment 2.1 - Live Character Counter</title>
+  <title>Live Character Counter</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <h2>Experiment 2.1</h2>
-
-  <h3>Aim</h3>
-  <p>
-    To implement a live character counter that updates as users type in a text area.
-  </p>
-
-  <h3>Objectives</h3>
-  <ul>
-    <li>Create a responsive text input component</li>
-    <li>Implement real-time character counting</li>
-    <li>Add visual feedback for character limits</li>
-    <li>Style with modern CSS techniques</li>
-  </ul>
-
-  <h3>Program</h3>
-
-  <div class="container">
-    <textarea id="textInput" maxlength="150"
-      placeholder="Type your text here..."></textarea>
-
-    <p id="counter">0 / 150 characters</p>
+  <div class="box">
+    <textarea id="text" maxlength="150"
+      placeholder="Type your message..."></textarea>
+    <p id="count">0 / 150</p>
   </div>
-
-  <h3>Result</h3>
-  <p>
-    Live character counter is implemented successfully.
-  </p>
 
   <script src="script.js"></script>
 </body>
