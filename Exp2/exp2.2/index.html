@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 2.2 - Dynamic Product Filter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <h2>Experiment 2.2</h2>
+
+  <h3>Aim</h3>
+  <p>
+    To create a dynamic product filter that sorts items based on dropdown selection.
+  </p>
+
+  <h3>Objectives</h3>
+  <ul>
+    <li>Implement filterable product data</li>
+    <li>Create sortable dropdown UI</li>
+    <li>Add responsive product cards</li>
+    <li>Animate layout transitions</li>
+  </ul>
+
+  <h3>Program</h3>
+
+  <label for="filter">Sort Products:</label>
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="low">Price: Low to High</option>
+    <option value="high">Price: High to Low</option>
+  </select>
+
+  <div id="productContainer" class="product-container"></div>
+
+  <h3>Result</h3>
+  <p>
+    Products are dynamically filtered and displayed based on user selection.
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
