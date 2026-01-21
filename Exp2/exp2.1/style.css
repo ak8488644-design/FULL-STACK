@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  padding: 20px;
+}
+
+.container {
+  width: 400px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+#counter {
+  text-align: right;
+  margin-top: 8px;
+  color: #333;
+}
+
+.limit {
+  color: red;
+  font-weight: bold;
+}
