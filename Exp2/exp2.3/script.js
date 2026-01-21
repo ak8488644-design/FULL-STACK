@@ -1,46 +1,26 @@
-const svg = document.getElementById("drawingArea");
-const colorPicker = document.getElementById("colorPicker");
-const undoBtn = document.getElementById("undoBtn");
+const svg = document.getElementById("svg");
+const color = document.getElementById("color");
+const undo = document.getElementById("undo");
+let drawing = false, path, paths=[];
 
-let drawing = false;
-let currentPath = null;
-let paths = [];
-
-svg.addEventListener("mousedown", (e) => {
+svg.onmousedown = e => {
   drawing = true;
+  path = document.createElementNS("http://www.w3.org/2000/svg","path");
+  path.setAttribute("stroke", color.value);
+  path.setAttribute("fill","none");
+  path.setAttribute("d", `M ${e.offsetX} ${e.offsetY}`);
+  svg.appendChild(path);
+  paths.push(path);
+};
 
-  const rect = svg.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  currentPath.setAttribute("d", `M ${x} ${y}`);
-  currentPath.setAttribute("stroke", colorPicker.value);
-  currentPath.setAttribute("stroke-width", 2);
-  currentPath.setAttribute("fill", "none");
-
-  svg.appendChild(currentPath);
-  paths.push(currentPath);
-});
-
-svg.addEventListener("mousemove", (e) => {
+svg.onmousemove = e => {
   if (!drawing) return;
+  path.setAttribute("d", path.getAttribute("d") + ` L ${e.offsetX} ${e.offsetY}`);
+};
 
-  const rect = svg.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+svg.onmouseup = () => drawing = false;
 
-  let d = currentPath.getAttribute("d");
-  currentPath.setAttribute("d", `${d} L ${x} ${y}`);
-});
-
-svg.addEventListener("mouseup", () => {
-  drawing = false;
-});
-
-undoBtn.addEventListener("click", () => {
-  const lastPath = paths.pop();
-  if (lastPath) {
-    svg.removeChild(lastPath);
-  }
-});
+undo.onclick = () => {
+  const p = paths.pop();
+  if (p) svg.removeChild(p);
+};
