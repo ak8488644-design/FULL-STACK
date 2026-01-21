@@ -1,37 +1,24 @@
-const products = [
-  { name: "Product A", price: 500 },
-  { name: "Product B", price: 300 },
-  { name: "Product C", price: 700 },
-  { name: "Product D", price: 400 }
+const data = [
+  { name: "A", price: 300 },
+  { name: "B", price: 100 },
+  { name: "C", price: 200 }
 ];
 
-const container = document.getElementById("productContainer");
-const filter = document.getElementById("filter");
+const box = document.getElementById("products");
+const sort = document.getElementById("sort");
 
-function displayProducts(items) {
-  container.innerHTML = "";
-
-  items.forEach(product => {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.innerHTML = `
-      <h4>${product.name}</h4>
-      <p>Price: ₹${product.price}</p>
-    `;
-    container.appendChild(card);
+function show(list) {
+  box.innerHTML = "";
+  list.forEach(p => {
+    box.innerHTML += `<div class="card">${p.name} - ₹${p.price}</div>`;
   });
 }
 
-filter.addEventListener("change", function () {
-  let sortedProducts = [...products];
+sort.onchange = () => {
+  let arr = [...data];
+  if (sort.value === "low") arr.sort((a,b)=>a.price-b.price);
+  if (sort.value === "high") arr.sort((a,b)=>b.price-a.price);
+  show(arr);
+};
 
-  if (filter.value === "low") {
-    sortedProducts.sort((a, b) => a.price - b.price);
-  } else if (filter.value === "high") {
-    sortedProducts.sort((a, b) => b.price - a.price);
-  }
-
-  displayProducts(sortedProducts);
-});
-
-displayProducts(products);
+show(data);
